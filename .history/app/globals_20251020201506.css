@@ -1,0 +1,132 @@
+@import "tailwindcss";
+
+:root {
+  --primary: #121731;
+  --grey: #728a9c;
+  --light: #ffffff;
+  --dark-alt: #555555;
+}
+
+html {
+  scroll-behavior: smooth;
+  margin-top: 60px;
+  font-family: 'Poppins', sans-serif;
+}
+
+#services {
+  scroll-margin-top: 70px;
+  margin-top: 50px;
+  margin-bottom: ;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scrollbar-width: thin;
+  scrollbar-color: #728a9c #f0f0f0;
+}
+
+body {
+  background-color: var(--light);
+  color: var(--dark-alt);
+  line-height: 1.6;
+}
+
+/* Flip Card Styles */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.transform-style-preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+/* Nav Link Hover Effects */
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 1100px) {
+  .navbar-left {
+    gap: 5rem !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .nav-links {
+    display: none !important;
+  }
+  
+  .mobile-menu-btn {
+    display: flex !important;
+  }
+  
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  
+  .steps-container {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  
+  .steps-column {
+    max-width: 90% !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+  
+  .flip-card {
+    height: 200px !important;
+  }
+  
+  .footer-content {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .logo-text, .logo-text1 {
+    font-size: 1.3rem !important;
+  }
+  
+  .hero-title {
+    font-size: 2rem !important;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem !important;
+  }
+}
