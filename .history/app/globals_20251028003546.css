@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+
+
+
+:root {
+  --primary: #121731;
+  --grey: #728a9c;
+  --light: #ffffff;
+  --dark-alt: #555555;
+}
+
